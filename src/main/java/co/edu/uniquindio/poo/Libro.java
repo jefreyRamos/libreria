@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo;
 
 public class Libro {
-    private String titulo;
-    private String autor;
+    private final String titulo;
+    private final String autor;
     private int ejemplaresDisponibles;
 
     public Libro(String titulo, String autor, int ejemplaresDisponibles) {
@@ -10,4 +10,22 @@ public class Libro {
         this.autor = autor;
         this.ejemplaresDisponibles = ejemplaresDisponibles;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getEjemplaresDisponibles() {
+        return ejemplaresDisponibles;
+    }
+
+    public void setEjemplaresDisponibles(int ejemplaresDisponibles) {
+        this.ejemplaresDisponibles = ejemplaresDisponibles;
+    }
+
+    
 }

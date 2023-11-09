@@ -15,4 +15,14 @@ public class Empleado extends Persona {
     @Override
     public void establecerAtributos() {
     }
+
+
+    public String getCargo() {
+        return cargo;
+    }
+
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 }

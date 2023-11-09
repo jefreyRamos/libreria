@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo;
 
 public abstract class Persona {
-    private String nombre;
-    private String apellido;
+    private final String nombre;
+    private final String apellido;
     private int edad;
 
     public Persona(String nombre, String apellido, int edad) {
@@ -10,8 +10,28 @@ public abstract class Persona {
         this.apellido = apellido;
         this.edad = edad;
     }
-    
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+
+    public String getApellido() {
+        return apellido;
+    }
+
+
+
+    public int getEdad() {
+        return edad;
+    }
+
+
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 
     public abstract void obtenerAtributos();
 
