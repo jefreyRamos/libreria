@@ -1,17 +1,21 @@
 package co.edu.uniquindio.poo;
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class PrestamoRegistro {
     private Libro libro;
     private Cliente cliente;
     private Date fechaPrestamo;
-    private Date fechaDevolucion;
+    private LocalDate fechaDevolucion;
 
-    public PrestamoRegistro(Libro libro, Cliente cliente, Date fechaPrestamo) {
+    public PrestamoRegistro(Libro libro, Cliente cliente, Date fechaPrestamo, LocalDate fechaDevolucion) {
         this.libro = libro;
         this.cliente = cliente;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = null;
+        assert libro != null;
+        assert cliente != null;
+        assert fechaPrestamo != null;
     }
 
     public Libro getLibro() {
@@ -38,11 +42,11 @@ public class PrestamoRegistro {
         this.fechaPrestamo = fechaPrestamo;
     }
 
-    public Date getFechaDevolucion() {
+    public LocalDate getFechaDevolucion() {
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(Date fechaDevolucion) {
+    public void setFechaDevolucion(LocalDate fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
     

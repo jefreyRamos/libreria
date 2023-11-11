@@ -11,18 +11,11 @@ public class Cliente extends Persona {
         super(nombre, apellido, edad);
         this.numeroCliente = numeroCliente;
         this.prestamos = new ArrayList<>();
-    }
-
-    @Override
-    public void obtenerAtributos() {
-    }
-
-    @Override
-    public void establecerAtributos() {
+        assert numeroCliente >= 0;
     }
 
     public void realizarPrestamo(Libro libro) {
-        PrestamoRegistro prestamo = new PrestamoRegistro(libro, this, null);
+        PrestamoRegistro prestamo = new PrestamoRegistro(libro, this, null, null);
         prestamos.add(prestamo);
     }
 
@@ -40,6 +33,26 @@ public class Cliente extends Persona {
 
     public void setPrestamos(List<PrestamoRegistro> prestamos) {
         this.prestamos = prestamos;
+    }
+
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public String getApellido() {
+        return apellido;
+    }
+
+    @Override
+    public int getEdad() {
+        return edad;
+    }
+
+    @Override
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
     
 }

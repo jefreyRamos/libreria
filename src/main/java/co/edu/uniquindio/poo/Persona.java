@@ -1,39 +1,22 @@
 package co.edu.uniquindio.poo;
 
 public abstract class Persona {
-    private final String nombre;
-    private final String apellido;
-    private int edad;
+    protected final String nombre;
+    protected final String apellido;
+    protected int edad;
 
     public Persona(String nombre, String apellido, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        assert nombre != null;
+        assert apellido != null;
+        assert edad >= 0;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public abstract String getNombre();
+    public abstract String getApellido();
+    public abstract int getEdad();
+    public abstract void setEdad(int edad);
 
-
-
-    public String getApellido() {
-        return apellido;
-    }
-
-
-
-    public int getEdad() {
-        return edad;
-    }
-
-
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public abstract void obtenerAtributos();
-
-    public abstract void establecerAtributos();
 }

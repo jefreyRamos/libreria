@@ -8,15 +8,6 @@ public class Empleado extends Persona {
         this.cargo = cargo;
     }
 
-    @Override
-    public void obtenerAtributos() {
-    }
-
-    @Override
-    public void establecerAtributos() {
-    }
-
-
     public String getCargo() {
         return cargo;
     }
@@ -24,5 +15,25 @@ public class Empleado extends Persona {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public String getApellido() {
+        return apellido;
+    }
+
+    @Override
+    public int getEdad() {
+        return edad;
+    }
+
+    @Override
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 }

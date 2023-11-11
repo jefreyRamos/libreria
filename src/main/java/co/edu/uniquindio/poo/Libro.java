@@ -9,6 +9,9 @@ public class Libro {
         this.titulo = titulo;
         this.autor = autor;
         this.ejemplaresDisponibles = ejemplaresDisponibles;
+        assert titulo != null;
+        assert autor != null;
+        assert ejemplaresDisponibles >= 0;
     }
 
     public String getTitulo() {
